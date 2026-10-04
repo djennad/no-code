@@ -1,5 +1,7 @@
 # No-Code Studio
 
+**Live app: https://djennad.github.io/no-code/**
+
 A visual, drag-and-drop builder for websites and small web apps. You design pages on a canvas, connect them to data with variables and actions, preview them live, and export a single HTML file that you can host anywhere. You don't write any code.
 
 ## Features
@@ -43,6 +45,10 @@ Other scripts:
 | `npm run lint`      | Lint with oxlint                                 |
 
 The built app in `dist/` is static, so you can deploy it to any static host (GitHub Pages, Netlify, Vercel, S3, …).
+
+### Deploying to GitHub Pages
+
+`.github/workflows/deploy.yml` builds the app on every push to `main` and publishes `dist/` to the `gh-pages` branch. You can also run it by hand from the repository's **Actions** tab. GitHub Pages must serve that branch: in **Settings → Pages**, set **Source** to *Deploy from a branch* and pick `gh-pages` / `/ (root)`. The site is then live at `https://<user>.github.io/<repo>/`.
 
 ## Using the builder
 
